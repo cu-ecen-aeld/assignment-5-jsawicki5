@@ -5,8 +5,6 @@ on:
             - '*'
         branches:
             - '*'
-env:
-  ASSIGNMENT: "assignment4"  # Set this to the correct assignment directory
 jobs:
     full-test:
         container: cuaesd/aesd-autotest:assignment4-buildroot
