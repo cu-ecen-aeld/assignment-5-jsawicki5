@@ -12,6 +12,7 @@ jobs:
         timeout-minutes: 120
         steps:
           - uses: actions/checkout@v2
+          
           - name: Set up SSH
             uses: webfactory/ssh-agent@v0.5.3
             with:
@@ -31,6 +32,7 @@ jobs:
             env:
               GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
             run: ./full-test.sh
+            
           - name: Cleanup
             if: always()
             run: |
