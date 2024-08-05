@@ -17,7 +17,7 @@ jobs:
           - name: Update assignment-autotest submodule
             run: git submodule update --remote --checkout --recursive assignment-autotest
           - name: Update buildroot submodule
-            run: git submodule update --remote --checkout --recursive --branch 2022.02.x buildroot
+            run: git submodule update --remote --checkout --recursive buildroot
           - uses: webfactory/ssh-agent@v0.5.3
             with:
                 ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
